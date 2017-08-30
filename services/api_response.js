@@ -1,5 +1,4 @@
 'use strict';
-var log = require('../app_util/logger');
 
 module.exports.successResponse = function(req, res, data, customMsg) {
   res.setHeader('Content-type', 'application/json; charset=utf-8');

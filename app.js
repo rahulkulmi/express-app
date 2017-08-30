@@ -1,7 +1,6 @@
 'use strict';
 var express = require('express');
 var router = express.Router();
-var path = require('path');
 var session = require('express-session');
 var config = require('./config/config');
 var log = require('./app_util/logger');
@@ -42,11 +41,11 @@ app.use(function(req, res, next) {
 
 // api routes
 require('./routes/routes')(app, router);
-function errorHandler (err, req, res, next) {
- if (res.headersSent) {
-   return next(err);
- }
- response.errorResponse(req, res, appException.INTERNAL_SERVER_ERROR(), err.stack);
+function errorHandler(err, req, res, next) {
+  if (res.headersSent) {
+    return next(err);
+  }
+  response.errorResponse(req, res, appException.INTERNAL_SERVER_ERROR(), err.stack);
 }
 app.use(errorHandler);
 
