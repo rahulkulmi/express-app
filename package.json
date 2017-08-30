@@ -1,0 +1,28 @@
+{
+  "name": "expressapp",
+  "version": "1.0.0",
+  "description": "Express App",
+  "main": "app.js",
+  "scripts": {
+    "eslint": "eslint ."
+  },
+  "author": "Rahul Kulmi",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "1.17.2",
+    "express": "4.15.4",
+    "express-validator": "4.1.0",
+    "express-session": "1.15.5",
+    "method-override": "2.3.9",
+    "path": "0.12.7",
+    "morgan": "1.8.2",
+    "winston": "2.3.1"
+  },
+  "devDependencies": {
+    "eslint": "4.5.0",
+    "pre-commit": "1.2.2"
+  },
+  "pre-commit": [
+    "eslint"
+  ]
+}
